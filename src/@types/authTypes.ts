@@ -1,8 +1,16 @@
 export interface AuthState {
     isAuthenticated: boolean
-    user?: User | null
+    user?: AutharizationUser | null
 }
 export interface User {
-    email: string
+    username: string
     password: string
+}
+export interface AuthAction {
+    username: string
+    password: string | number
+}
+export interface AutharizationUser {
+    access_token: string,
+    id: number
 }
