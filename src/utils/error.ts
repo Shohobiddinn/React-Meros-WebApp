@@ -7,15 +7,16 @@ export default function error(e: any) {
             toast('error', detail)
 
         case 401:
-            throw new Error('Unauthorized');
+            // throw new Error('Unauthorized');
         case 403:
-            throw new Error('Forbidden');
+            // throw new Error('Forbidden');
         case 404:
-            throw new Error('Not Found');
+            // throw new Error('Not Found');
         case 500:
-            throw new Error('Server Error');
+            toast('error', 'Internet bilan aloqa yo\'q')
+
         default:
     }
 
-    throw new Error('An error occurred')
+    // throw new Error('An error occurred')
 }
