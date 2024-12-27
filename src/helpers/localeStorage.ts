@@ -1,3 +1,5 @@
+import { AutharizationUser } from "../@types/authTypes";
+
 export const getItem = (key: string) => {
     try {
         const item = localStorage.getItem(key);
@@ -10,4 +12,10 @@ export const getItem = (key: string) => {
         return null;
     }
 }
-
+export const setItem = (key: string, data: AutharizationUser) => {
+    try {
+        localStorage.setItem(key, JSON.stringify(data));
+    } catch (error) {
+        console.log('Error setting data');
+    }
+}
