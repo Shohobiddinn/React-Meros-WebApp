@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal } from '../../components';
+import { BranchItem, Modal } from '../../components';
 import { Button, Input } from '../../UIComponents';
 
 const Branches = () => {
@@ -10,7 +10,7 @@ const Branches = () => {
 
     return (
         <div>
-            <h1>React Modal Misoli</h1>
+            <BranchItem />
             <button onClick={openModal}>Modalni ochish</button>
             <Modal isOpen={isModalOpen} onClose={closeModal} >
 
