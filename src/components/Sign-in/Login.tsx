@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { User, AutharizationUser } from '../../@types/authTypes';
-import AuthService from "../../servise/authServise"
+import { AuthService } from "../../servise"
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../slice/authSlice";
 import { toast, error } from "../../utils";

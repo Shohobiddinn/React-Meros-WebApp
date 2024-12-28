@@ -1,16 +1,21 @@
 import { postBranch } from '../@types/apiTypes';
+import { Branches } from '../@types/branchTypes';
+import { Get } from '../@types/default';
 import axios from './axios';
 import query from './query';
-function getBranches(p = query) {
+async function getBranches(p = query): Promise<Get<Branches[]>> {
     const status = p.status ? `&status=${p.status}` : ``;
     const page = p.page ? `&page=${p.page}` : ``;
     const limit = p.limit ? `&limit=${p.limit}` : ``;
-    return axios.get(`/branch?${status}${page}${limit}`)
+
+    const response = await axios.get(`/branch?${status}${page}${limit}`);
+    return response.data; // TypeScript bu yerda ma'lumotlarni `Get<Branches[]>` deb qabul qiladi
 }
 function createBranch(data: postBranch) {
-    return axios.post('/branch', data)
+    return axios.post('/branch/add', data)
 }
 
-export default {
+export {
     getBranches,  // Get all branches
+    createBranch,
 }
