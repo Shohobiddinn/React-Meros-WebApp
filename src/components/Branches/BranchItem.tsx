@@ -1,7 +1,16 @@
-export default function BranchItem() {
-    return (
-        <>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et provident culpa velit quo itaque illo deleniti aperiam ex, similique iste sit eveniet officiis maxime nisi exercitationem ullam quibusdam, quod voluptatem.
-        </>
-    )
+import { Branches } from "../../@types/branchTypes";
+
+interface BranchItemProps {
+    item: Branches;  
 }
+
+const BranchItem: React.FC<BranchItemProps> = ({ item }) => {
+    return (
+        <div>
+            <p>{item.name}</p>
+            <p>{item.status ? 'Active' : 'Inactive'}</p>
+        </div>
+    );
+};
+
+export default BranchItem;

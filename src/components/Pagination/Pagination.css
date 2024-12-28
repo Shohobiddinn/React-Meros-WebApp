@@ -1,0 +1,48 @@
+
+   .pagination-container {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.buttonPagination {
+    padding:2px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttonPagination:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.buttonPagination:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+    color: #aaa;
+}
+
+select {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
