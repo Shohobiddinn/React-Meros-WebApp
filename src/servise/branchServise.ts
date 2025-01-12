@@ -3,7 +3,7 @@ import { Branches } from '../@types/branchTypes';
 import { Get } from '../@types/default';
 import axios from './axios';
 import query from './query';
-async function getBranches(p = query): Promise<Get<Branches[]>> {
+async function getBranches(p = query){
     const status = p.status ? `&status=${p.status}` : ``;
     const page = p.page ? `&page=${p.page}` : ``;
     const limit = p.limit ? `&limit=${p.limit}` : ``;

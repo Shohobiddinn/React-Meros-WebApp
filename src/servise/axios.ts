@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { getItem } from '../helpers/localeStorage'
 
-axios.defaults.baseURL = 'https://demo.m14.uz'
+axios.defaults.baseURL = 'http://65.21.190.82'
 
 axios.interceptors.request.use(config => {
     const user = getItem('user')

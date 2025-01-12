@@ -23,8 +23,13 @@ const BranchesPage = () => {
     });
 
     // Branchlarni olish uchun function
-    const fetchBranches = async () => {
-        const response: Get<Branches[]> = await getBranches();
+    const fetchBranches = async (): Promise<void> => {
+        let param: any = {
+            current_page: pagination.current_page,
+            limit: pagination.limit,
+
+        }
+        const response: Get<Branches[]> = await getBranches(param);
         setBranches(response);
 
         // Paginationni yangilash: current_page, pages, limit va data
